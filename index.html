@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>未来住建 - 家族の笑顔をデザインする工務店【トップページ】</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="home"> <!-- トップページ識別用クラス -->
+
+    <!-- ▼▼▼ 超リッチ オープニングアニメーション (トップページ専用) ▼▼▼ -->
+    <div id="super-rich-opening">
+        <div class="sro-particles-container">
+            <!-- パーティクルはJSまたはCSSで生成・アニメーション -->
+        </div>
+        <div class="sro-background-shifter"></div>
+        <div class="sro-content">
+            <div class="sro-logo-wrapper">
+                <!-- ロゴをSVGや複数のspanで細かく制御することも可能 -->
+                <span class="sro-logo-char char-mi">未</span>
+                <span class="sro-logo-char char-rai">来</span>
+                <span class="sro-logo-char char-ju">住</span>
+                <span class="sro-logo-char char-ken">建</span>
+            </div>
+            <p class="sro-catchphrase">家族の笑顔をデザインする</p>
+        </div>
+    </div>
+    <!-- ▲▲▲ 超リッチ オープニングアニメーション (トップページ専用) ▲▲▲ -->
+
+    <!-- 既存の #loader はトップページでは使用しないのでコメントアウトまたは削除 -->
+    <!--
+    <div id="loader">
+        <div class="loader-logo">未来住建</div>
+        <div class="loader-dots">
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+    -->
+
+    <!-- ヘッダー (オープニングアニメーション中は非表示、完了後に表示) -->
+    <header id="header" class="initially-hidden">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">未来住建</a></h1>
+            <nav class="global-nav">
+                <ul>
+                    <li><a href="index.html" class="active">ホーム</a></li>
+                    <li><a href="about.html">私たちについて</a></li>
+                    <li><a href="services.html">サービス</a></li>
+                    <li><a href="works.html">施工事例</a></li>
+                    <li><a href="company.html">会社概要・お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" id="hamburger-menu" aria-label="メニューを開く" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ (変更なしなので省略、前回提示したものをそのまま使用してください) -->
+    <main class="initially-hidden">
+        <!-- ヒーローセクション -->
+        <section id="hero">
+            <!--
+            <div class="hero-background-slider">
+                <div class="hero-slide" style="background-image: url('https://via.placeholder.com/1920x1080/aabbcc/ffffff?text=Mirai+Juken+Living');"></div>
+            </div>
+            -->
+            <div class="hero-background-layers">
+                <div class="hero-bg-layer layer-deep" style="background-image: url('images/hero_bg_deep.jpg');"></div>
+                <div class="hero-bg-layer layer-middle" style="background-image: url('images/hero_bg_middle.png');"></div>
+                <div class="hero-bg-layer layer-near" style="background-image: url('images/hero_bg_near.png');"></div>
+            </div>
+            <div class="hero-overlay"></div> <!-- コンテンツの可読性向上のためのオーバーレイ -->
+            <div class="hero-content">
+                <h2 class="animate-on-load fade-in-up">家族の笑顔をデザインする、<br>未来への住まいづくり。</h2>
+                <p class="animate-on-load fade-in-up delay-1">未来住建は、お客様一人ひとりの想いに寄り添い、<br>快適で安心な住環境を創造します。</p>
+                <a href="services.html" class="btn animate-on-load fade-in-up delay-2">サービスを見る</a>
+            </div>
+        </section>
+
+        <!-- 私たちについて (トップページ抜粋) -->
+        <section id="home-about" class="content-section">
+            <div class="container">
+                <h3 class="section-title animate-on-scroll fade-in">未来住建の想い</h3>
+                <div class="home-about-content">
+                    <div class="home-about-text animate-on-scroll fade-in-left">
+                        <h4>技術と信頼で、理想の暮らしを。</h4>
+                        <p>私たちは、ただ家を建てるだけではありません。お客様の夢、ライフスタイル、そして未来への希望を形にすることを目指しています。長年の経験で培った確かな技術と、お客様との対話を大切にする誠実な姿勢で、心からご満足いただける住まいづくりをお約束します。</p>
+                        <a href="about.html" class="btn btn-outline">もっと詳しく</a>
+                    </div>
+                    <div class="home-about-image animate-on-scroll fade-in-right">
+                        <img src="https://via.placeholder.com/500x350/ddeeff/333333?text=Our+Commitment" alt="未来住建のこだわり">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス概要 (トップページ) -->
+        <section id="home-services" class="content-section bg-light">
+            <div class="container">
+                <h3 class="section-title animate-on-scroll fade-in">サービス</h3>
+                <div class="service-grid">
+                     <div class="service-item animate-on-scroll fade-in-up">
+                        <img src="https://via.placeholder.com/350x230/ccddff/333333?text=New+House" alt="新築注文住宅">
+                        <h4>新築注文住宅</h4>
+                        <p>自由設計で、家族のライフスタイルに合わせた理想の住まいを実現します。</p>
+                    </div>
+                    <div class="service-item animate-on-scroll fade-in-up delay-1">
+                        <img src="https://via.placeholder.com/350x230/ddceff/333333?text=Renovation" alt="リフォーム・リノベーション">
+                        <h4>リフォーム・リノベーション</h4>
+                        <p>既存の住まいをより快適に。大規模な改修から部分的なリフォームまで対応。</p>
+                    </div>
+                    <div class="service-item animate-on-scroll fade-in-up delay-2">
+                        <img src="https://via.placeholder.com/350x230/ffccdd/333333?text=Store+Design" alt="店舗デザイン">
+                        <h4>店舗デザイン・施工</h4>
+                        <p>魅力的な店舗空間を創造し、ビジネスの成功をサポートします。</p>
+                    </div>
+                </div>
+                 <div class="text-center animate-on-scroll fade-in-up delay-3">
+                    <a href="services.html" class="btn">全てのサービスを見る</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 施工事例 (トップページ抜粋) -->
+        <section id="home-works" class="content-section">
+            <div class="container">
+                <h3 class="section-title animate-on-scroll fade-in">最新の施工事例</h3>
+                <div class="works-grid">
+                    <div class="work-item animate-on-scroll fade-in-up">
+                        <a href="works.html#work1">
+                            <img src="https://via.placeholder.com/400x300/eeddcc/333333?text=Work+Example+1" alt="施工事例1">
+                            <div class="work-caption"><h4>光と風が通る家</h4></div>
+                        </a>
+                    </div>
+                    <div class="work-item animate-on-scroll fade-in-up delay-1">
+                         <a href="works.html#work2">
+                            <img src="https://via.placeholder.com/400x300/ddeecc/333333?text=Work+Example+2" alt="施工事例2">
+                            <div class="work-caption"><h4>木の温もりを感じるLDK</h4></div>
+                        </a>
+                    </div>
+                    <div class="work-item animate-on-scroll fade-in-up delay-2">
+                        <a href="works.html#work3">
+                            <img src="https://via.placeholder.com/400x300/ccddeeff/333333?text=Work+Example+3" alt="施工事例3"> <!-- タイポ修正 -->
+                            <div class="work-caption"><h4>家族が集うアイランドキッチン</h4></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center animate-on-scroll fade-in-up delay-3">
+                    <a href="works.html" class="btn">施工事例一覧へ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ誘導 (CTA) -->
+        <section id="home-contact-cta" class="content-section cta-section">
+            <div class="container text-center">
+                <h3 class="section-title-cta animate-on-scroll fade-in">家づくりのこと、お気軽にご相談ください</h3>
+                <p class="animate-on-scroll fade-in-up">未来住建が、あなたの理想の住まいづくりを全力でサポートします。</p>
+                <a href="company.html#contact-form" class="btn btn-primary animate-on-scroll fade-in-up delay-1">お問い合わせはこちら</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="initially-hidden">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>株式会社 未来住建</h4>
+                    <p>〒123-4567 東京都未来区住建町1-2-3</p>
+                    <p>TEL: 03-1234-5678</p>
+                    <p>受付時間: 9:00〜18:00（水曜定休）</p>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">私たちについて</a></li>
+                        <li><a href="services.html">サービス</a></li>
+                        <li><a href="works.html">施工事例</a></li>
+                        <li><a href="company.html">会社概要・お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">© 2024 未来住建. All Rights Reserved.</p>
+            <p class="text-center" style="margin-top: 10px;"><a href="company.html#privacy">プライバシーポリシー</a></p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
