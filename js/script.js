@@ -63,35 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- ハンバーガーメニュー ---
-    if (hamburgerMenu && globalNav) {
-        hamburgerMenu.addEventListener('click', () => {
-            hamburgerMenu.classList.toggle('active');
-            globalNav.classList.toggle('active');
-            const isExpanded = hamburgerMenu.getAttribute('aria-expanded') === 'true' || false;
-            hamburgerMenu.setAttribute('aria-expanded', !isExpanded);
-            
-            // スマホメニュー表示時に背景をスクロールさせない (クラスで制御)
-            if (globalNav.classList.contains('active')) {
-                document.body.classList.add('menu-open');
-            } else {
-                document.body.classList.remove('menu-open');
-            }
-        });
-
-        // メニュー内のリンククリックでメニューを閉じる
-        globalNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (globalNav.classList.contains('active')) { // メニューが開いている場合のみ
-                    hamburgerMenu.classList.remove('active');
-                    globalNav.classList.remove('active');
-                    hamburgerMenu.setAttribute('aria-expanded', 'false');
-                    document.body.classList.remove('menu-open');
-                }
-            });
-        });
-    }
-
     // --- FAQ アコーディオン (services.html) ---
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length > 0) {

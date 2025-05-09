@@ -280,7 +280,7 @@ main { padding-top: var(--header-height); }
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* コンテンツ(.hero-content)より後ろ、オーバーレイより後ろ */
+    /* z-index: 1; /* コンテンツ(.hero-content)より後ろ、オーバーレイより後ろ */
 }
 
 .hero-bg-layer {
@@ -294,6 +294,7 @@ main { padding-top: var(--header-height); }
     /* background-size: cover; /* coverだと一部見えない可能性も。デザインに応じて contain や auto 100% なども検討 */
     /* JSで動かすため、少し大きめに表示してはみ出させることもあります */
     /* 例: width: 110%; height: 110%; top: -5%; left: -5%; */
+    will-change: transform;
 }
 
 .hero-bg-layer.layer-deep {
@@ -314,7 +315,7 @@ main { padding-top: var(--header-height); }
     /* 透過PNGを想定。さらに手前にあり、より大きく動くイメージ */
     /* background-size: contain; や具体的なpx指定も可 */
     background-size: auto 60%; /* 例: 高さを60%に */
-    z-index: 3;
+    z-index: 4;
     /* JavaScriptで動かす際に、初期位置を少しずらしても良い */
     /* top: 20%; など */
 }
@@ -327,7 +328,7 @@ main { padding-top: var(--header-height); }
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%); /* グラデーション調整 */
-    z-index: 2; /* 背景レイヤーとコンテンツの間 */
+    z-index: 3; /* 背景レイヤーとコンテンツの間 */
 }
 .hero-background-slider {
     position: absolute;
@@ -355,7 +356,7 @@ main { padding-top: var(--header-height); }
 }
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 5;
     color: var(--text-light-color);
     padding: 20px;
 }
@@ -1317,6 +1318,12 @@ main { padding-top: var(--header-height); }
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+
+.strength-item i {
+    color: var(--primary-color); /* アイコンの色 */
+    margin-bottom: 20px; /* 下のテキストとの間隔 */
+    /* fa-3x でサイズは指定済み */
 }
 
 .sro-background-shifter {
