@@ -998,7 +998,7 @@ main { padding-top: var(--header-height); }
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 .feature-item .feature-icon { /* アイコンコンテナ */
-    margin-bottom: 15px;
+    margin-bottom: 5px; /* 下のテキストとの間隔を調整 */
 }
 .feature-item .feature-icon img {
     width: 50px; /* アイコンサイズ調整 */
