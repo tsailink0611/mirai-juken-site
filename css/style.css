@@ -957,15 +957,6 @@ main { padding-top: var(--header-height); }
 /* .btn, .btn-secondary は style.css にあるので、ここで再定義は不要。
    もし、services.html 専用のボタンスタイルが必要な場合は、
    .service-buttons .btn のようにセレクタを特化させる */
-.btn-secondary { /* style.css の .btn-outline とほぼ同じだが、色は primary */
-    background-color: transparent;
-    color: var(--primary-color) !important;
-    border: 2px solid var(--primary-color);
-}
-.btn-secondary:hover {
-    background-color: var(--primary-color);
-    color: var(--text-light-color) !important;
-}
 
 
 /* 特徴グリッド (services.html - 新築住宅) */
